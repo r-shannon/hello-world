@@ -1,0 +1,40 @@
+#BASH Script
+# Must satisfy these requirements
+# 1. Conditional Statement
+# 2. Loop
+# 3. Reading in a value from a user
+# 4. Displaying output based on the value read in
+
+clear
+
+echo "Greetings Professor Weissman"
+echo "Shall We Play a Game? (y/n)"
+
+read ans1
+
+#Conditional Statement
+if [ "$ans1" = y ]; then
+echo "How about GLOBAL THERMONUCLEAR WAR"
+
+elif [ "$ans1" = n ]; then
+echo "A strange game"
+echo "The only winning move is"
+echo "Not to play"
+
+else
+echo "invalid response"
+echo "Self Destruct Sequence Intitated"
+
+#Loop
+for (( count=10; count>=1; count-=1))
+do
+echo "$count"
+done
+fi
+
+#Read in user input
+echo "Please enter two numbers to be added"
+read num1 num2
+ans2=$(( "$num1" + "$num2" ))
+#Output
+echo ""$num1" + "$num2" = "$ans2""
