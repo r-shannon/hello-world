@@ -1,0 +1,35 @@
+#Powershell Script
+cls
+#menu
+Write-Host "Please choose an option 1-4"
+Write-Host "1: See a list of processes on the system"
+Write-Host "2: See a list of services on the system"
+Write-Host "3: Send a ping"
+Write-Host "4: Double a number"
+     $option = Read-Host "Please choose an option"
+     switch ($option)
+     {
+           '1' {
+                cls
+                #display process list
+                Get-Process
+           } '2' {
+                cls
+                #display service list
+                Get-Service
+           } '3' {
+                cls
+                #powershell ping
+                Write-Host "Send a ping"
+                $ping = Read-Host "Please enter an IP or FQDN"
+                Test-Connection $ping
+
+           } '4' {
+                cls
+                #double number
+                Write-Host "Double a number"
+                $num1 = Read-Host "Please enter a number to be doubled"
+                $num2 = ([int]$num1 * 2)
+                Write-Host "Your original number was $num1, but now it is $num2"
+           }
+     }
